@@ -1,3 +1,16 @@
+<script type="text/javascript">
+    var ledlamp%.object_id%Effect=%.effect%;
+    var ledlamp%.object_id%Timer=0;
+    function sendNewEffect%.object_id%() {
+        setGlobal("%.object_title%.effect",ledlamp%.object_id%Effect);
+    }
+    function effectSet%.object_id%(val) {
+        ledlamp%.object_id%Effect=val;
+        //$('#ledlamp%.object_id%_effect').html(ledlamp%.object_id%Effect);
+        sendNewEffect%.object_id%();
+        //$.get("<#ROOTHTML#>ajax/devices.html?op=clicked&object="+encodeURIComponent("%.object_title%"));
+    }
+</script>
 <div class="device-widget controller loadtype_%.loadType%"
      onClick='$(".icon%.object_id%_light").addClass("pressed");
      setTimeout("$(\".icon%.object_id%_light\").removeClass(\"pressed\");",300);
@@ -5,4 +18,35 @@
      $.get("<#ROOTHTML#>ajax/devices.html?op=clicked&object="+encodeURIComponent("%.object_title%"));'>
 <div class="device-icon %.status|"off;on"% icon%.object_id%_light" id="icon%.object_id%_light" style='%.icon|"background-image:url(%.icon%)"%'></div>
 <div class="device-header">%.object_description%</div>
+</div>
+<div class="device-details"> <span id="ledlamp%.object_id%_effect">Effect:</span>
+    &nbsp;
+    <select id="effectSelect%.object_id%" onchange="effectSet%.object_id%(this.value);" style="color:black">
+        <option value="0"  %.effect|"selected;;"%>Sparkles</option>
+        <option value="1"  %.effect|";selected;"%>Fire</option>
+        <option value="2"  %.effect|";;selected;"%>White fire</option>
+        <option value="3"  %.effect|";;;selected;"%>Rainbow vertical</option>
+        <option value="4"  %.effect|";;;;selected;"%>Rainbow horizontal</option>
+        <option value="5"  %.effect|";;;;;selected;"%>Rainbow diagonal</option>
+        <option value="6"  %.effect|";;;;;;selected;"%>Color</option>
+        <option value="7"  %.effect|";;;;;;;selected;"%>Madness</option>
+        <option value="8"  %.effect|";;;;;;;;selected;"%>Clouds</option>
+        <option value="9"  %.effect|";;;;;;;;;selected;"%>Lava</option>
+        <option value="10" %.effect|";;;;;;;;;;selected;"%>Plasma</option>
+        <option value="11" %.effect|";;;;;;;;;;;selected;"%>Rainbow</option>
+        <option value="12" %.effect|";;;;;;;;;;;;selected;"%>Rainbow stripe</option>
+        <option value="13" %.effect|";;;;;;;;;;;;;selected;"%>Zebra</option>
+        <option value="14" %.effect|";;;;;;;;;;;;;;selected;"%>Forest</option>
+        <option value="15" %.effect|";;;;;;;;;;;;;;;selected;"%>Ocean</option>
+        <option value="16" %.effect|";;;;;;;;;;;;;;;;selected;"%>Color</option>
+        <option value="17" %.effect|";;;;;;;;;;;;;;;;;selected;"%>Snow</option>
+        <option value="18" %.effect|";;;;;;;;;;;;;;;;;;selected;"%>Snowstorm</option>
+        <option value="19" %.effect|";;;;;;;;;;;;;;;;;;;selected;"%>Starfall</option>
+        <option value="20" %.effect|";;;;;;;;;;;;;;;;;;;;selected;"%>Matrix</option>
+        <option value="21" %.effect|";;;;;;;;;;;;;;;;;;;;;selected;"%>Lighters</option>
+        <option value="22" %.effect|";;;;;;;;;;;;;;;;;;;;;;selected;"%>Lighter traces</option>
+        <option value="23" %.effect|";;;;;;;;;;;;;;;;;;;;;;;selected;"%>Paintball</option>
+        <option value="24" %.effect|";;;;;;;;;;;;;;;;;;;;;;;;selected;"%>Cube</option>
+        <option value="25" %.effect|";;;;;;;;;;;;;;;;;;;;;;;;;selected;"%>White color</option>
+    </select>
 </div>
