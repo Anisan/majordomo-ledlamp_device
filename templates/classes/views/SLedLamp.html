@@ -1,3 +1,21 @@
+<style>
+.container {
+  position: relative;
+}
+.sliderlamp {
+  width:130px;
+}
+.labelW{
+    display: inline-block;
+    width: 55px;
+    text-align: right;
+}
+.labelSlider {
+    
+    height: 30px;
+    vertical-align: middle;
+}
+</style>
 <script type="text/javascript">
     var ledlamp%.object_id%Effect=%.effect%;
     var ledlamp%.object_id%Timer=0;
@@ -10,18 +28,26 @@
         sendNewEffect%.object_id%();
         //$.get("<#ROOTHTML#>ajax/devices.html?op=clicked&object="+encodeURIComponent("%.object_title%"));
     }
+    function changeBrightness%.object_id%(val) {
+        setGlobal("%.object_title%.brightness",val);
+    }
+    function changeSpeed%.object_id%(val) {
+        setGlobal("%.object_title%.speed",val);
+    }
+    function changeScale%.object_id%(val) {
+        setGlobal("%.object_title%.scale",val);
+    }
 </script>
-<div class="device-widget controller loadtype_%.loadType%"
+<div class='device-widget controller %.alive|"offline;online"%'
      onClick='$(".icon%.object_id%_light").addClass("pressed");
-     setTimeout("$(\".icon%.object_id%_light\").removeClass(\"pressed\");",300);
+     setTimeout("$(\".icon%.object_id%_light\").removeClass(\"pressed\");",500);
      callMethod("%.object_title%.switch");
      $.get("<#ROOTHTML#>ajax/devices.html?op=clicked&object="+encodeURIComponent("%.object_title%"));'>
-<div class="device-icon %.status|"off;on"% icon%.object_id%_light" id="icon%.object_id%_light" style='%.icon|"background-image:url(%.icon%)"%'></div>
-<div class="device-header">%.object_description%</div>
+<div class="device-icon icon%.object_id%_light" id="icon%.object_id%_light" style="background-image:url(/templates/classes/views/img/LedLamp_%.status|"0.png;1.png"%);background-size: 55px 55px;width:60px;height:60px;margin-right:5px"></div>
+<div class="device-header" style="padding-top:0px;height:22px;">%.object_description%</div>
 </div>
-<div class="device-details"> <span id="ledlamp%.object_id%_effect">Effect:</span>
-    &nbsp;
-    <select id="effectSelect%.object_id%" onchange="effectSet%.object_id%(this.value);" style="color:black">
+<div class="device-details"> <span class="labelW" style="height:0px;" id="ledlamp%.object_id%_effect">Effect:</span>&nbsp;
+    <select id="effectSelect%.object_id%" onchange="effectSet%.object_id%(this.value);" style="color:black;margin-left:3px;margin-bottom:5px;width:150px;">
         <option value="0"  %.effect|"selected;;"%>Sparkles</option>
         <option value="1"  %.effect|";selected;"%>Fire</option>
         <option value="2"  %.effect|";;selected;"%>White fire</option>
@@ -50,3 +76,12 @@
         <option value="25" %.effect|";;;;;;;;;;;;;;;;;;;;;;;;;selected;"%>White color</option>
     </select>
 </div>
+<div class="device-details"><span class="labelW labelSlider">Brightness:</span>
+&nbsp;
+    <input class="sliderlamp" type="range" id="brightness%.object_id%" min="0" max="255" value="%.brightness%" onchange="changeBrightness%.object_id%(this.value)"></div>
+<div class="device-details" style="margin-left:70px"><span class="labelW labelSlider">Speed:</span>
+&nbsp;
+    <input class="sliderlamp" type="range" id="speed%.object_id%" min="0" max="255" value="%.speed%" onchange="changeSpeed%.object_id%(this.value)"></div>
+<div class="device-details" style="margin-left:70px"><span class="labelW labelSlider">Scale:</span>
+&nbsp;
+    <input class="sliderlamp" type="range" id="scale%.object_id%" min="0" max="100" value="%.scale%" onchange="changeScale%.object_id%(this.value)"></div>
