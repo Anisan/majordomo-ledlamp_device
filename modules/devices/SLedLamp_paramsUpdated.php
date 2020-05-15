@@ -55,6 +55,6 @@ if ( $params['PROPERTY'] == "timer_state")
     if ($params['NEW_VALUE'] == 6) $sec = 1800;
     if ($params['NEW_VALUE'] == 7) $sec = 2700;
     if ($params['NEW_VALUE'] == 8) $sec = 3600;
-    $this->setProperty('cmnd', 'TMR '.$state.' '.$params['NEW_VALUE'].' '.$sec);
+    $this->setProperty('cmnd', 'TMR_SET '.$state.' '.$params['NEW_VALUE'].' '.$sec);
 }
 
