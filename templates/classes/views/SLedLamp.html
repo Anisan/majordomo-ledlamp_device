@@ -47,33 +47,33 @@
 <div class="device-header" style="padding-top:0px;height:22px;">%.object_description%</div>
 </div>
 <div class="device-details"> <span class="labelW" style="height:0px;" id="ledlamp%.object_id%_effect">Effect:</span>&nbsp;
-    <select id="effectSelect%.object_id%" onchange="effectSet%.object_id%(this.value);" style="color:black;margin-left:3px;margin-bottom:5px;width:130px;">
-        <option value="0"  %.effect|"selected;;"%>Sparkles</option>
+    <select id="effectSelect%.object_id%" onchange="effectSet%.object_id%(this.value);" style="color:#%.color%;margin-left:3px;margin-bottom:5px;width:130px;">
+        <option value="0"  %.effect|"selected;"%>Sparkles</option>
         <option value="1"  %.effect|";selected;"%>Fire</option>
-        <option value="2"  %.effect|";;selected;"%>White fire</option>
-        <option value="3"  %.effect|";;;selected;"%>Rainbow vertical</option>
-        <option value="4"  %.effect|";;;;selected;"%>Rainbow horizontal</option>
-        <option value="5"  %.effect|";;;;;selected;"%>Rainbow diagonal</option>
-        <option value="6"  %.effect|";;;;;;selected;"%>Color</option>
-        <option value="7"  %.effect|";;;;;;;selected;"%>Madness</option>
-        <option value="8"  %.effect|";;;;;;;;selected;"%>Clouds</option>
-        <option value="9"  %.effect|";;;;;;;;;selected;"%>Lava</option>
-        <option value="10" %.effect|";;;;;;;;;;selected;"%>Plasma</option>
-        <option value="11" %.effect|";;;;;;;;;;;selected;"%>Rainbow</option>
-        <option value="12" %.effect|";;;;;;;;;;;;selected;"%>Rainbow stripe</option>
-        <option value="13" %.effect|";;;;;;;;;;;;;selected;"%>Zebra</option>
-        <option value="14" %.effect|";;;;;;;;;;;;;;selected;"%>Forest</option>
-        <option value="15" %.effect|";;;;;;;;;;;;;;;selected;"%>Ocean</option>
-        <option value="16" %.effect|";;;;;;;;;;;;;;;;selected;"%>Color</option>
-        <option value="17" %.effect|";;;;;;;;;;;;;;;;;selected;"%>Snow</option>
-        <option value="18" %.effect|";;;;;;;;;;;;;;;;;;selected;"%>Snowstorm</option>
-        <option value="19" %.effect|";;;;;;;;;;;;;;;;;;;selected;"%>Starfall</option>
-        <option value="20" %.effect|";;;;;;;;;;;;;;;;;;;;selected;"%>Matrix</option>
-        <option value="21" %.effect|";;;;;;;;;;;;;;;;;;;;;selected;"%>Lighters</option>
-        <option value="22" %.effect|";;;;;;;;;;;;;;;;;;;;;;selected;"%>Lighter traces</option>
-        <option value="23" %.effect|";;;;;;;;;;;;;;;;;;;;;;;selected;"%>Paintball</option>
-        <option value="24" %.effect|";;;;;;;;;;;;;;;;;;;;;;;;selected;"%>Cube</option>
-        <option value="25" %.effect|";;;;;;;;;;;;;;;;;;;;;;;;;selected;"%>White color</option>
+        <option value="2"  %.effect|"2=selected;"%>White fire</option>
+        <option value="3"  %.effect|"3=selected;"%>Rainbow vertical</option>
+        <option value="4"  %.effect|"4=selected;"%>Rainbow horizontal</option>
+        <option value="5"  %.effect|"5=selected;"%>Rainbow diagonal</option>
+        <option value="6"  %.effect|"6=selected;"%>Colors</option>
+        <option value="7"  %.effect|"7=selected;"%>Madness</option>
+        <option value="8"  %.effect|"8=selected;"%>Clouds</option>
+        <option value="9"  %.effect|"9=selected;"%>Lava</option>
+        <option value="10" %.effect|"10=selected;"%>Plasma</option>
+        <option value="11" %.effect|"11=selected;"%>Rainbow</option>
+        <option value="12" %.effect|"12=selected;"%>Rainbow stripe</option>
+        <option value="13" %.effect|"13=selected;"%>Zebra</option>
+        <option value="14" %.effect|"14=selected;"%>Forest</option>
+        <option value="15" %.effect|"15=selected;"%>Ocean</option>
+        <option value="16" %.effect|"16=selected;"%>Color</option>
+        <option value="17" %.effect|"17=selected;"%>Snow</option>
+        <option value="18" %.effect|"18=selected;"%>Snowstorm</option>
+        <option value="19" %.effect|"19=selected;"%>Starfall</option>
+        <option value="20" %.effect|"20=selected;"%>Matrix</option>
+        <option value="21" %.effect|"21=selected;"%>Lighters</option>
+        <option value="22" %.effect|"22=selected;"%>Lighter traces</option>
+        <option value="23" %.effect|"23=selected;"%>Paintball</option>
+        <option value="24" %.effect|"24=selected;"%>Cube</option>
+        <option value="25" %.effect|"25=selected;"%>White color</option>
     </select>
 </div>
 <div class="device-details"><span class="labelW labelSlider">Brightness:</span>
@@ -82,6 +82,7 @@
 <div class="device-details" style="margin-left:70px"><span class="labelW labelSlider">Speed:</span>
 &nbsp;
     <input class="sliderlamp" type="range" id="speed%.object_id%" min="0" max="255" value="%.speed%" onchange="changeSpeed%.object_id%(this.value)"></div>
-<div class="device-details" style="margin-left:70px"><span class="labelW labelSlider">Scale:</span>
+<div class="device-details" style="margin-left:70px;"><span class="labelW labelSlider">Scale:</span>
 &nbsp;
-    <input class="sliderlamp" type="range" id="scale%.object_id%" min="0" max="100" value="%.scale%" onchange="changeScale%.object_id%(this.value)"></div>
+    <span style="%.effect|"16=background-image:url(/templates/classes/views/img/hue.png);"%;background-size: 130px 55px;" >
+    <input class="sliderlamp" type="range" id="scale%.object_id%" min="0" max='%.effect|"16=255;"%' value="%.scale%" onchange="changeScale%.object_id%(this.value)"></span></div>

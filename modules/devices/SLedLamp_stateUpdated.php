@@ -22,7 +22,17 @@ if ($this->getProperty('timer_work') != $state[8])
 }
 if ($this->getProperty('button_lock') != $state[9])
   $this->setProperty('button_lock', $state[9]); 
+
+if ($state[1] == 16)
+{
+    // effect Color
+    $rgbHex = hsvToHex(intval($state[4]/255*360),100,intval($state[2]/255*100));
+    $this->setProperty('color', $rgbHex); 
 }
+else
+    $this->setProperty('color', "000000"); 
+}
+
 if ($state[0]=="TMR")
 {
 if ($this->getProperty('timer_work') != $state[1])
