@@ -9,7 +9,13 @@ if (strpos($params['SOURCE'], "ALMS") !== FALSE ) return;
 if ( $params['PROPERTY'] == "effect")
     $this->setProperty('cmnd', 'EFF'.$params['NEW_VALUE']);
 if ( $params['PROPERTY'] == "brightness")
-    $this->setProperty('cmnd', 'BRI'.$params['NEW_VALUE']);
+{
+    if ($params['NEW_VALUE']>100)
+        $bri = 255;
+    else
+        $bri = round($params['NEW_VALUE']*255/100);
+    $this->setProperty('cmnd', 'BRI'.$bri);
+}
 if ( $params['PROPERTY'] == "speed")
     $this->setProperty('cmnd', 'SPD'.$params['NEW_VALUE']);
 if ( $params['PROPERTY'] == "scale")

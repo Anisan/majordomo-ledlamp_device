@@ -6,8 +6,9 @@ if ($state[0]=="CURR")
 {
 if ($this->getProperty('effect') != $state[1])
   $this->setProperty('effect', $state[1]);
-if ($this->getProperty('brightness') != $state[2])
-  $this->setProperty('brightness', $state[2]); 
+$brightness = round($state[2]*100/255);
+if ($this->getProperty('brightness') != $brightness)
+  $this->setProperty('brightness', $brightness); 
 if ($this->getProperty('speed') != $state[3])
   $this->setProperty('speed', $state[3]); 
 if ($this->getProperty('scale') != $state[4])
