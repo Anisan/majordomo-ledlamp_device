@@ -48,32 +48,92 @@
 </div>
 <div class="device-details"> <span class="labelW" style="height:0px;" id="ledlamp%.object_id%_effect">Effect:</span>&nbsp;
     <select id="effectSelect%.object_id%" onchange="effectSet%.object_id%(this.value);" style="color:#%.color%;margin-left:3px;margin-bottom:5px;width:130px;">
-        <option value="0"  %.effect|"selected;"%>Sparkles</option>
-        <option value="1"  %.effect|";selected;"%>Fire</option>
-        <option value="2"  %.effect|"2=selected;"%>White fire</option>
-        <option value="3"  %.effect|"3=selected;"%>Rainbow vertical</option>
-        <option value="4"  %.effect|"4=selected;"%>Rainbow horizontal</option>
-        <option value="5"  %.effect|"5=selected;"%>Rainbow diagonal</option>
-        <option value="6"  %.effect|"6=selected;"%>Colors</option>
-        <option value="7"  %.effect|"7=selected;"%>Madness</option>
-        <option value="8"  %.effect|"8=selected;"%>Clouds</option>
-        <option value="9"  %.effect|"9=selected;"%>Lava</option>
-        <option value="10" %.effect|"10=selected;"%>Plasma</option>
-        <option value="11" %.effect|"11=selected;"%>Rainbow</option>
-        <option value="12" %.effect|"12=selected;"%>Rainbow stripe</option>
-        <option value="13" %.effect|"13=selected;"%>Zebra</option>
-        <option value="14" %.effect|"14=selected;"%>Forest</option>
-        <option value="15" %.effect|"15=selected;"%>Ocean</option>
-        <option value="16" %.effect|"16=selected;"%>Color</option>
-        <option value="17" %.effect|"17=selected;"%>Snow</option>
-        <option value="18" %.effect|"18=selected;"%>Snowstorm</option>
-        <option value="19" %.effect|"19=selected;"%>Starfall</option>
-        <option value="20" %.effect|"20=selected;"%>Matrix</option>
-        <option value="21" %.effect|"21=selected;"%>Lighters</option>
-        <option value="22" %.effect|"22=selected;"%>Lighter traces</option>
-        <option value="23" %.effect|"23=selected;"%>Paintball</option>
-        <option value="24" %.effect|"24=selected;"%>Cube</option>
-        <option value="25" %.effect|"25=selected;"%>White color</option>
+        <option value="0"  %.effect|"selected;"%>White color</option>
+        <option value="1"  %.effect|";selected;"%>Color</option>
+        <option value="2"  %.effect|"2=selected;"%>Colors</option>
+        <option value="3"  %.effect|"3=selected;"%>Madness</option>
+        <option value="4"  %.effect|"4=selected;"%>Clouds</option>
+        <option value="5"  %.effect|"5=selected;"%>Lava</option>
+        <option value="6"  %.effect|"6=selected;"%>Plasma</option>
+        <option value="7"  %.effect|"7=selected;"%>Rainbow 3D</option>
+        <option value="8"  %.effect|"8=selected;"%>Rainbow strip</option>
+        <option value="9"  %.effect|"9=selected;"%>Zebra</option>
+        <option value="10" %.effect|"10=selected;"%>Forest</option>
+        <option value="11" %.effect|"11=selected;"%>Ocean</option>
+        <option value="12" %.effect|"12=selected;"%>Balls</option>
+        <option value="13" %.effect|"13=selected;"%>Balls bounce</option>
+        <option value="14" %.effect|"14=selected;"%>Popcorn</option>
+        <option value="15" %.effect|"15=selected;"%>Spiro</option>
+        <option value="16" %.effect|"16=selected;"%>Prismata</option>
+        <option value="17" %.effect|"17=selected;"%>Smoke balls</option>
+        <option value="18" %.effect|"18=selected;"%>Pacific</option>
+        <option value="19" %.effect|"19=selected;"%>Shadows</option>
+        <option value="20" %.effect|"20=selected;"%>DNA</option>
+        <option value="21" %.effect|"21=selected;"%>Flock</option>
+        <option value="22" %.effect|"22=selected;"%>Flock and predator</option>
+        <option value="23" %.effect|"23=selected;"%>Butterflys</option>
+        <option value="24" %.effect|"24=selected;"%>Butterflys lamp</option>
+        <option value="25" %.effect|"25=selected;"%>Snakes</option>
+        <option value="26" %.effect|"26=selected;"%>Nexus</option>
+        <option value="27" %.effect|"27=selected;"%>Spheres</option>
+        <option value="28" %.effect|"28=selected;"%>Sinusoid</option>
+        <option value="29" %.effect|"29=selected;"%>Metaballs</option>
+        <option value="30" %.effect|"30=selected;"%>Aurora</option>
+        <option value="31" %.effect|"31=selected;"%>Spider</option>
+        <option value="32" %.effect|"32=selected;"%>Lava lamp</option>
+        <option value="33" %.effect|"33=selected;"%>Liquid lamp</option>
+        <option value="34" %.effect|"34=selected;"%>Liquid lamp (auto)</option>
+        <option value="35" %.effect|"35=selected;"%>Drops</option>
+        <option value="36" %.effect|"36=selected;"%>Matrix</option>
+        <option value="37" %.effect|"37=selected;"%>Fire 2012</option>
+        <option value="38" %.effect|"38=selected;"%>Fire 2018</option>
+        <option value="39" %.effect|"39=selected;"%>Fire 2020</option>
+        <option value="40" %.effect|"40=selected;"%>Fire</option>
+        <option value="41" %.effect|"41=selected;"%>Whirl</option>
+        <option value="42" %.effect|"42=selected;"%>Whirl multi</option>
+        <option value="43" %.effect|"43=selected;"%>Magma</option>
+        <option value="44" %.effect|"44=selected;"%>Boil</option>
+        <option value="45" %.effect|"45=selected;"%>Waterfall</option>
+        <option value="46" %.effect|"46=selected;"%>Waterfall 4 in 1</option>
+        <option value="47" %.effect|"47=selected;"%>Pool</option>
+        <option value="48" %.effect|"48=selected;"%>Pulse</option>
+        <option value="49" %.effect|"49=selected;"%>Pulse rainbow</option>
+        <option value="50" %.effect|"50=selected;"%>Pulse white</option>
+        <option value="51" %.effect|"51=selected;"%>Oscillating</option>
+        <option value="52" %.effect|"52=selected;"%>Fountain</option>
+        <option value="53" %.effect|"53=selected;"%>Fairy</option>
+        <option value="53" %.effect|"54=selected;"%>Comet</option>
+        <option value="55" %.effect|"55=selected;"%>Comet color</option>
+        <option value="56" %.effect|"56=selected;"%>Comet two</option>
+        <option value="57" %.effect|"57=selected;"%>Comet three</option>
+        <option value="58" %.effect|"58=selected;"%>Attract</option>
+        <option value="59" %.effect|"59=selected;"%>Firefly</option>
+        <option value="60" %.effect|"60=selected;"%>Firefly top</option>
+        <option value="61" %.effect|"61=selected;"%>Snake</option>
+        <option value="62" %.effect|"62=selected;"%>Sparkles</option>
+        <option value="63" %.effect|"63=selected;"%>Twinkles</option>
+        <option value="64" %.effect|"64=selected;"%>Smoke</option>
+        <option value="65" %.effect|"65=selected;"%>Smoke color</option>
+        <option value="66" %.effect|"66=selected;"%>Picasso</option>
+        <option value="67" %.effect|"67=selected;"%>Picasso2</option>
+        <option value="68" %.effect|"68=selected;"%>Picasso3</option>
+        <option value="69" %.effect|"69=selected;"%>Waves</option>
+        <option value="70" %.effect|"70=selected;"%>Sand</option>
+        <option value="71" %.effect|"71=selected;"%>Rings</option>
+        <option value="72" %.effect|"72=selected;"%>Cube2D</option>
+        <option value="73" %.effect|"73=selected;"%>Simple rain</option>
+        <option value="74" %.effect|"74=selected;"%>Stormy rain</option>
+        <option value="75" %.effect|"75=selected;"%>Color rain</option>
+        <option value="76" %.effect|"76=selected;"%>Rain</option>
+        <option value="77" %.effect|"77=selected;"%>Show</option>
+        <option value="78" %.effect|"78=selected;"%>Starfall</option>
+        <option value="79" %.effect|"79=selected;"%>Leapers</option>
+        <option value="80" %.effect|"80=selected;"%>Lighters</option>
+        <option value="81" %.effect|"81=selected;"%>Lighters traces</option>
+        <option value="82" %.effect|"82=selected;"%>Paintball</option>
+        <option value="83" %.effect|"83=selected;"%>Rainbow</option>
+        <option value="84" %.effect|"84=selected;"%>Clock</option>
+        <option value="85" %.effect|"85=selected;"%>Text</option>
     </select>
 </div>
 <div class="device-details"><span class="labelW labelSlider">Brightness:</span>
